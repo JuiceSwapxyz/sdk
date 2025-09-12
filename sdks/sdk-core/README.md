@@ -1,6 +1,6 @@
-# Uniswap SDK Core
+# JuiceSwap SDK Core
 
-[![npm version](https://img.shields.io/npm/v/@uniswap/sdk-core/latest.svg)](https://www.npmjs.com/package/@uniswap/sdk-core/v/latest)
-[![npm bundle size (scoped version)](https://img.shields.io/bundlephobia/minzip/@uniswap/sdk-core/latest.svg)](https://bundlephobia.com/result?p=@uniswap/sdk-core@latest)
+[![npm version](https://img.shields.io/npm/v/@juiceswap/sdk-core/latest.svg)](https://www.npmjs.com/package/@juiceswap/sdk-core/v/latest)
+[![npm bundle size (scoped version)](https://img.shields.io/bundlephobia/minzip/@juiceswap/sdk-core/latest.svg)](https://bundlephobia.com/result?p=@juiceswap/sdk-core@latest)
 
-This code is shared across Uniswap TypeScript SDKs.
+This code is shared across JuiceSwap TypeScript SDKs.

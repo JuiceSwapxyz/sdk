@@ -12,7 +12,7 @@ export * from "./validation";
 export * from "./V2DutchOrder";
 export * from "./V3DutchOrder";
 
-export type UniswapXOrder =
+export type JuiceSwapXOrder =
   | DutchOrder
   | UnsignedV2DutchOrder
   | CosignedV2DutchOrder
@@ -21,4 +21,4 @@ export type UniswapXOrder =
   | UnsignedPriorityOrder
   | CosignedPriorityOrder;
 
-export type Order = UniswapXOrder | RelayOrder;
+export type Order = JuiceSwapXOrder | RelayOrder;

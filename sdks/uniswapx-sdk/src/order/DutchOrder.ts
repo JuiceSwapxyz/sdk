@@ -4,13 +4,13 @@ import {
   PermitTransferFromData,
   SignatureTransfer,
   Witness,
-} from "@uniswap/permit2-sdk";
+} from "@juiceswap/permit2-sdk";
 import { BigNumber, ethers } from "ethers";
 import { keccak256, toUtf8Bytes } from "ethers/lib/utils";
 
 import { BPS, PERMIT2_MAPPING } from "../constants";
 import { MissingConfiguration } from "../errors";
-import { ResolvedUniswapXOrder } from "../utils/OrderQuoter";
+import { ResolvedJuiceSwapXOrder } from "../utils/OrderQuoter";
 import { getDecayedAmount } from "../utils/dutchDecay";
 
 import {
@@ -322,7 +322,7 @@ export class DutchOrder implements OffChainOrder {
    * Returns the resolved order with the given options
    * @return The resolved order
    */
-  resolve(options: OrderResolutionOptions): ResolvedUniswapXOrder {
+  resolve(options: OrderResolutionOptions): ResolvedJuiceSwapXOrder {
     const useOverride =
       this.info.exclusiveFiller !== ethers.constants.AddressZero &&
       options.timestamp <= this.info.decayStartTime &&

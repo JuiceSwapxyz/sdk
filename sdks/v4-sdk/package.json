@@ -1,9 +1,9 @@
 {
-  "name": "@uniswap/v4-sdk",
-  "description": "⚒️ An SDK for building applications on top of Uniswap V4",
-  "repository": "https://github.com/Uniswap/sdks.git",
+  "name": "@juiceswap/v4-sdk",
+  "description": "⚒️ An SDK for building applications on top of JuiceSwap V4",
+  "repository": "https://github.com/JuiceSwapxyz/sdk.git",
   "keywords": [
-    "uniswap",
+    "juiceswap",
     "ethereum"
   ],
   "license": "MIT",
@@ -26,8 +26,8 @@
   "sideEffects": false,
   "dependencies": {
     "@ethersproject/solidity": "^5.0.9",
-    "@uniswap/sdk-core": "^7.7.1",
-    "@uniswap/v3-sdk": "3.25.2",
+    "@juiceswap/sdk-core": "^7.7.1",
+    "@juiceswap/v3-sdk": "3.25.2",
     "tiny-invariant": "^1.1.0",
     "tiny-warning": "^1.0.3"
   },

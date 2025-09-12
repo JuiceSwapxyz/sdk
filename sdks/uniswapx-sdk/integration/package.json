@@ -1,5 +1,5 @@
 {
-  "name": "uniswapx-integration",
+  "name": "juiceswapx-integration",
   "version": "0.1.0",
   "license": "MIT",
   "main": "dist/index.js",
@@ -13,7 +13,7 @@
   "scripts": {
     "test": "hardhat test"
   },
-  "author": "Uniswap",
+  "author": "JuiceSwap",
   "devDependencies": {
     "@nomicfoundation/hardhat-chai-matchers": "1.0.6",
     "@nomicfoundation/hardhat-network-helpers": "^1.0.10",
@@ -30,7 +30,7 @@
     "@ethersproject/bytes": "^5.7.0",
     "@typechain/ethers-v5": "^10.1.0",
     "@typechain/hardhat": "^6.1.2",
-    "@uniswap/sdk-core": "^7.5.0",
+    "@juiceswap/sdk-core": "^7.5.0",
     "dotenv": "^16.0.3",
     "ethers": "^5.7.0",
     "typechain": "^8.1.0"

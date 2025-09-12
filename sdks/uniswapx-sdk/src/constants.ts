@@ -1,4 +1,4 @@
-import { ChainId } from "@uniswap/sdk-core";
+import { ChainId } from "@juiceswap/sdk-core";
 import { BigNumber } from "ethers";
 
 type AddressMap = { readonly [key: number]: string };

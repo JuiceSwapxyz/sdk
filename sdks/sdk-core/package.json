@@ -1,9 +1,9 @@
 {
-  "name": "@uniswap/sdk-core",
-  "description": "⚒️ An SDK for building applications on top of Uniswap V3",
-  "repository": "https://github.com/Uniswap/sdks.git",
+  "name": "@juiceswap/sdk-core",
+  "description": "⚒️ An SDK for building applications on top of JuiceSwap V3",
+  "repository": "https://github.com/JuiceSwapxyz/sdk.git",
   "keywords": [
-    "uniswap",
+    "juiceswap",
     "ethereum"
   ],
   "license": "MIT",

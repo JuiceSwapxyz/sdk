@@ -1,19 +1,19 @@
 # Smart Wallet SDK
 
-⚒️ An SDK for building applications with smart wallets on Uniswap
+⚒️ An SDK for building applications with smart wallets on JuiceSwap
 
-This SDK provides utilities for interacting with Uniswap protocols using smart wallets.
+This SDK provides utilities for interacting with JuiceSwap protocols using smart wallets.
 
 ## Installation
 
 ```bash
-npm install @uniswap/smart-wallet-sdk
+npm install @juiceswap/smart-wallet-sdk
 ```
 
 or
 
 ```bash
-yarn add @uniswap/smart-wallet-sdk
+yarn add @juiceswap/smart-wallet-sdk
 ```
 
 ## Deployment Addresses

@@ -4,11 +4,11 @@ import {
   PermitTransferFromData,
   SignatureTransfer,
   Witness,
-} from "@uniswap/permit2-sdk";
+} from "@juiceswap/permit2-sdk";
 import { BigNumber, ethers } from "ethers";
 
 import { getPermit2 } from "../utils";
-import { ResolvedUniswapXOrder } from "../utils/OrderQuoter";
+import { ResolvedJuiceSwapXOrder } from "../utils/OrderQuoter";
 import { getDecayedAmount } from "../utils/dutchDecay";
 import { originalIfZero } from "../utils/order";
 
@@ -265,7 +265,7 @@ export class UnsignedV2DutchOrder implements OffChainOrder {
    * @return The resolved order
    */
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  resolve(_options: OrderResolutionOptions): ResolvedUniswapXOrder {
+  resolve(_options: OrderResolutionOptions): ResolvedJuiceSwapXOrder {
     // no cosigner data so no resolution possible
     throw new Error("Method not implemented");
   }
@@ -450,7 +450,7 @@ export class CosignedV2DutchOrder extends UnsignedV2DutchOrder {
   /**
    * @inheritdoc Order
    */
-  resolve(options: OrderResolutionOptions): ResolvedUniswapXOrder {
+  resolve(options: OrderResolutionOptions): ResolvedJuiceSwapXOrder {
     return {
       input: {
         token: this.info.input.token,

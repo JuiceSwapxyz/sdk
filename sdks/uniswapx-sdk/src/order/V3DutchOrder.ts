@@ -4,10 +4,10 @@ import {
     PermitTransferFromData,
     SignatureTransfer,
     Witness,
-} from "@uniswap/permit2-sdk";
+} from "@juiceswap/permit2-sdk";
 import { BigNumber, ethers } from "ethers";
 
-import { getPermit2, ResolvedUniswapXOrder } from "../utils";
+import { getPermit2, ResolvedJuiceSwapXOrder } from "../utils";
 import { getBlockDecayedAmount } from "../utils/dutchBlockDecay";
 import { originalIfZero } from "../utils/order";
 
@@ -581,7 +581,7 @@ export class CosignedV3DutchOrder extends UnsignedV3DutchOrder {
         return ethers.utils.recoverAddress(messageHash, signature);
     }
 
-    resolve(options: V3OrderResolutionOptions): ResolvedUniswapXOrder {
+    resolve(options: V3OrderResolutionOptions): ResolvedJuiceSwapXOrder {
         return {
             input: {
                 token: this.info.input.token,

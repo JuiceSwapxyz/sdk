@@ -1,4 +1,4 @@
-import { BigintIsh } from '@uniswap/sdk-core'
+import { BigintIsh } from '@juiceswap/sdk-core'
 import JSBI from 'jsbi'
 import { Q96 } from '../internalConstants'
 

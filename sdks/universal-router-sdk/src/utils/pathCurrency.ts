@@ -1,6 +1,6 @@
-import { Currency, Token } from '@uniswap/sdk-core'
-import { Pool as V4Pool } from '@uniswap/v4-sdk'
-import { TPool } from '@uniswap/router-sdk'
+import { Currency, Token } from '@juiceswap/sdk-core'
+import { Pool as V4Pool } from '@juiceswap/v4-sdk'
+import { TPool } from '@juiceswap/router-sdk'
 
 export function getPathCurrency(currency: Currency, pool: TPool): Currency {
   // return currency if the currency matches a currency of the pool

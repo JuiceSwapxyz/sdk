@@ -1,7 +1,7 @@
-import { Price, Currency } from '@uniswap/sdk-core'
+import { Price, Currency } from '@juiceswap/sdk-core'
 import JSBI from 'jsbi'
 import { Q192 } from '../internalConstants'
-import { TickMath, encodeSqrtRatioX96 } from '@uniswap/v3-sdk'
+import { TickMath, encodeSqrtRatioX96 } from '@juiceswap/v3-sdk'
 import { sortsBefore } from '../utils/sortsBefore'
 
 /**

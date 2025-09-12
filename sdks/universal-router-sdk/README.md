@@ -4,13 +4,13 @@ This SDK facilitates interactions with the contracts in [Universal Router](https
 ## Usage
 Install latest version of universal-router-sdk. Then import the corresponding Trade class and Data object for each protocol you'd like to interact with.
 
-### Trading on Uniswap
+### Trading on JuiceSwap
 warning: `swapERC20CallParameters()` to be deprecated in favor of `swapCallParameters()`
 ```typescript
-import { TradeType } from '@uniswap/sdk-core'
-import { Trade as V2TradeSDK } from '@uniswap/v2-sdk'
-import { Trade as V3TradeSDK } from '@uniswap/v3-sdk'
-import { MixedRouteTrade, MixedRouteSDK, Trade as RouterTrade } from '@uniswap/router-sdk'
+import { TradeType } from '@juiceswap/sdk-core'
+import { Trade as V2TradeSDK } from '@juiceswap/v2-sdk'
+import { Trade as V3TradeSDK } from '@juiceswap/v3-sdk'
+import { MixedRouteTrade, MixedRouteSDK, Trade as RouterTrade } from '@juiceswap/router-sdk'
 
 const options = { slippageTolerance, recipient }
 const routerTrade = new RouterTrade({ v2Routes, v3Routes, mixedRoutes, tradeType: TradeType.EXACT_INPUT })

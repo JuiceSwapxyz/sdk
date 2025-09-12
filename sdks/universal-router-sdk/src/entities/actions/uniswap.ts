@@ -1,6 +1,6 @@
 import { RoutePlanner, CommandType } from '../../utils/routerCommands'
-import { Trade as V2Trade, Pair } from '@uniswap/v2-sdk'
-import { Trade as V3Trade, Pool as V3Pool, encodeRouteToPath } from '@uniswap/v3-sdk'
+import { Trade as V2Trade, Pair } from '@juiceswap/v2-sdk'
+import { Trade as V3Trade, Pool as V3Pool, encodeRouteToPath } from '@juiceswap/v3-sdk'
 import {
   Route as V4Route,
   Trade as V4Trade,
@@ -8,7 +8,7 @@ import {
   V4Planner,
   encodeRouteToPath as encodeV4RouteToPath,
   Actions,
-} from '@uniswap/v4-sdk'
+} from '@juiceswap/v4-sdk'
 import {
   Trade as RouterTrade,
   MixedRouteTrade,
@@ -22,16 +22,16 @@ import {
   getOutputOfPools,
   encodeMixedRouteToPath,
   partitionMixedRouteByProtocol,
-} from '@uniswap/router-sdk'
+} from '@juiceswap/router-sdk'
 import { Permit2Permit } from '../../utils/inputTokens'
 import { getPathCurrency } from '../../utils/pathCurrency'
-import { Currency, TradeType, Token, CurrencyAmount, Percent } from '@uniswap/sdk-core'
+import { Currency, TradeType, Token, CurrencyAmount, Percent } from '@juiceswap/sdk-core'
 import { Command, RouterActionType, TradeConfig } from '../Command'
 import { SENDER_AS_RECIPIENT, ROUTER_AS_RECIPIENT, CONTRACT_BALANCE, ETH_ADDRESS } from '../../utils/constants'
 import { getCurrencyAddress } from '../../utils/getCurrencyAddress'
 import { encodeFeeBips } from '../../utils/numbers'
 import { BigNumber, BigNumberish } from 'ethers'
-import { TPool } from '@uniswap/router-sdk'
+import { TPool } from '@juiceswap/router-sdk'
 
 export type FlatFeeOptions = {
   amount: BigNumberish
@@ -59,8 +59,8 @@ interface Swap<TInput extends Currency, TOutput extends Currency> {
 
 // Wrapper for uniswap router-sdk trade entity to encode swaps for Universal Router
 // also translates trade objects from previous (v2, v3) SDKs
-export class UniswapTrade implements Command {
-  readonly tradeType: RouterActionType = RouterActionType.UniswapTrade
+export class JuiceSwapTrade implements Command {
+  readonly tradeType: RouterActionType = RouterActionType.JuiceSwapTrade
   readonly payerIsUser: boolean
 
   constructor(public trade: RouterTrade<Currency, Currency, TradeType>, public options: SwapOptions) {

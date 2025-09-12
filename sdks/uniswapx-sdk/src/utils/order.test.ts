@@ -19,7 +19,7 @@ import {
   UnsignedV3DutchOrder,
 } from "../order";
 
-import { RelayOrderParser, UniswapXOrderParser } from "./order";
+import { RelayOrderParser, JuiceSwapXOrderParser } from "./order";
 
 describe("order utils", () => {
   let dutchOrder: DutchOrder;
@@ -36,7 +36,7 @@ describe("order utils", () => {
   let priorityChainId: number;
   let blockBasedChainId: number;
 
-  const uniswapXOrderParser = new UniswapXOrderParser();
+  const uniswapXOrderParser = new JuiceSwapXOrderParser();
   const relayOrderParser = new RelayOrderParser();
 
   beforeAll(() => {

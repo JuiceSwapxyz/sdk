@@ -18,7 +18,7 @@ import {
   DutchOrderBuilder,
   DutchOrder,
   OrderValidator,
-  UniswapXOrderQuoter as OrderQuoterLib,
+  JuiceSwapXOrderQuoter as OrderQuoterLib,
   OrderValidation,
   getCancelSingleParams,
   PERMIT2_MAPPING,

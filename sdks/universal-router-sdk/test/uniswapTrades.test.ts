@@ -2,9 +2,9 @@ import { expect } from 'chai'
 import JSBI from 'jsbi'
 import { BigNumber, ethers, utils, Wallet, Signature } from 'ethers'
 import { expandTo18Decimals } from '../src/utils/numbers'
-import { SwapRouter, UniswapTrade, FlatFeeOptions } from '../src'
-import { MixedRouteTrade, MixedRouteSDK } from '@uniswap/router-sdk'
-import { Trade as V2Trade, Pair, Route as RouteV2 } from '@uniswap/v2-sdk'
+import { SwapRouter, JuiceSwapTrade, FlatFeeOptions } from '../src'
+import { MixedRouteTrade, MixedRouteSDK } from '@juiceswap/router-sdk'
+import { Trade as V2Trade, Pair, Route as RouteV2 } from '@juiceswap/v2-sdk'
 import {
   Trade as V3Trade,
   Route as V3Route,
@@ -16,8 +16,8 @@ import {
   TickMath,
   FeeAmount,
   NonfungiblePositionManager,
-} from '@uniswap/v3-sdk'
-import { Pool as V4Pool, Route as V4Route, Trade as V4Trade, Position as V4Position } from '@uniswap/v4-sdk'
+} from '@juiceswap/v3-sdk'
+import { Pool as V4Pool, Route as V4Route, Trade as V4Trade, Position as V4Position } from '@juiceswap/v4-sdk'
 import { generatePermitSignature, toInputPermit, makePermit, generateEip2098PermitSignature } from './utils/permit2'
 import {
   CHAIN_TO_ADDRESSES_MAP,
@@ -29,7 +29,7 @@ import {
   Percent,
   Token,
   TradeType,
-} from '@uniswap/sdk-core'
+} from '@juiceswap/sdk-core'
 import { registerFixture } from './forge/writeInterop'
 import { buildTrade, getUniswapPools, swapOptions, ETHER, DAI, USDC, WETH } from './utils/uniswapData'
 import { hexToDecimalString } from './utils/hexToDecimalString'
@@ -1235,7 +1235,7 @@ describe('Uniswap', () => {
           : CurrencyAmount.fromRawAmount(tokenOut, amount)
       }
 
-      function compareUniswapTrades(left: UniswapTrade, right: UniswapTrade): void {}
+      function compareJuiceSwapTrades(left: JuiceSwapTrade, right: JuiceSwapTrade): void {}
 
       it('v2 - erc20 <> erc20', async () => {
         const [tokenIn, tokenOut] = [DAI, USDC]
@@ -1266,7 +1266,7 @@ describe('Uniswap', () => {
         }
         const routerTrade = RouterTradeAdapter.fromClassicQuote(classicQuote)
 
-        compareUniswapTrades(new UniswapTrade(buildTrade([trade]), opts), new UniswapTrade(routerTrade, opts))
+        compareJuiceSwapTrades(new JuiceSwapTrade(buildTrade([trade]), opts), new JuiceSwapTrade(routerTrade, opts))
       })
 
       it('v3 - erc20 <> erc20', async () => {
@@ -1297,7 +1297,7 @@ describe('Uniswap', () => {
         }
         const routerTrade = RouterTradeAdapter.fromClassicQuote(classicQuote)
 
-        compareUniswapTrades(new UniswapTrade(buildTrade([trade]), opts), new UniswapTrade(routerTrade, opts))
+        compareJuiceSwapTrades(new JuiceSwapTrade(buildTrade([trade]), opts), new JuiceSwapTrade(routerTrade, opts))
       })
 
       it('v4 - erc20 <> erc20', async () => {
@@ -1328,7 +1328,7 @@ describe('Uniswap', () => {
         }
         const routerTrade = RouterTradeAdapter.fromClassicQuote(classicQuote)
 
-        compareUniswapTrades(new UniswapTrade(buildTrade([trade]), opts), new UniswapTrade(routerTrade, opts))
+        compareJuiceSwapTrades(new JuiceSwapTrade(buildTrade([trade]), opts), new JuiceSwapTrade(routerTrade, opts))
       })
 
       it('v2 - handles weth input properly', async () => {
@@ -1359,7 +1359,7 @@ describe('Uniswap', () => {
         }
         const routerTrade = RouterTradeAdapter.fromClassicQuote(classicQuote)
 
-        compareUniswapTrades(new UniswapTrade(buildTrade([trade]), opts), new UniswapTrade(routerTrade, opts))
+        compareJuiceSwapTrades(new JuiceSwapTrade(buildTrade([trade]), opts), new JuiceSwapTrade(routerTrade, opts))
       })
 
       it('v3 - handles weth input properly', async () => {
@@ -1390,7 +1390,7 @@ describe('Uniswap', () => {
         }
         const routerTrade = RouterTradeAdapter.fromClassicQuote(classicQuote)
 
-        compareUniswapTrades(new UniswapTrade(buildTrade([trade]), opts), new UniswapTrade(routerTrade, opts))
+        compareJuiceSwapTrades(new JuiceSwapTrade(buildTrade([trade]), opts), new JuiceSwapTrade(routerTrade, opts))
       })
 
       it('v4 - handles weth input properly', async () => {
@@ -1421,7 +1421,7 @@ describe('Uniswap', () => {
         }
         const routerTrade = RouterTradeAdapter.fromClassicQuote(classicQuote)
 
-        compareUniswapTrades(new UniswapTrade(buildTrade([trade]), opts), new UniswapTrade(routerTrade, opts))
+        compareJuiceSwapTrades(new JuiceSwapTrade(buildTrade([trade]), opts), new JuiceSwapTrade(routerTrade, opts))
       })
 
       it('v2 - handles eth input properly', async () => {
@@ -1453,7 +1453,7 @@ describe('Uniswap', () => {
         }
         const routerTrade = RouterTradeAdapter.fromClassicQuote(classicQuote)
 
-        compareUniswapTrades(new UniswapTrade(buildTrade([trade]), opts), new UniswapTrade(routerTrade, opts))
+        compareJuiceSwapTrades(new JuiceSwapTrade(buildTrade([trade]), opts), new JuiceSwapTrade(routerTrade, opts))
       })
 
       it('v2 - handles eth input properly - 0xeeee...eeee address', async () => {
@@ -1485,7 +1485,7 @@ describe('Uniswap', () => {
         }
         const routerTrade = RouterTradeAdapter.fromClassicQuote(classicQuote)
 
-        compareUniswapTrades(new UniswapTrade(buildTrade([trade]), opts), new UniswapTrade(routerTrade, opts))
+        compareJuiceSwapTrades(new JuiceSwapTrade(buildTrade([trade]), opts), new JuiceSwapTrade(routerTrade, opts))
       })
 
       it('v3 - handles eth input properly', async () => {
@@ -1521,7 +1521,7 @@ describe('Uniswap', () => {
         }
         const routerTrade = RouterTradeAdapter.fromClassicQuote(classicQuote)
 
-        compareUniswapTrades(new UniswapTrade(buildTrade([trade]), opts), new UniswapTrade(routerTrade, opts))
+        compareJuiceSwapTrades(new JuiceSwapTrade(buildTrade([trade]), opts), new JuiceSwapTrade(routerTrade, opts))
       })
 
       it('v4 - handles eth input properly', async () => {
@@ -1554,7 +1554,7 @@ describe('Uniswap', () => {
           ],
         }
         const routerTrade = RouterTradeAdapter.fromClassicQuote(classicQuote)
-        compareUniswapTrades(new UniswapTrade(buildTrade([trade]), opts), new UniswapTrade(routerTrade, opts))
+        compareJuiceSwapTrades(new JuiceSwapTrade(buildTrade([trade]), opts), new JuiceSwapTrade(routerTrade, opts))
       })
 
       it('v2 - handles eth output properly', async () => {
@@ -1586,7 +1586,7 @@ describe('Uniswap', () => {
         }
         const routerTrade = RouterTradeAdapter.fromClassicQuote(classicQuote)
 
-        compareUniswapTrades(new UniswapTrade(buildTrade([trade]), opts), new UniswapTrade(routerTrade, opts))
+        compareJuiceSwapTrades(new JuiceSwapTrade(buildTrade([trade]), opts), new JuiceSwapTrade(routerTrade, opts))
       })
 
       it('v3 - handles eth output properly', async () => {
@@ -1618,7 +1618,7 @@ describe('Uniswap', () => {
         }
         const routerTrade = RouterTradeAdapter.fromClassicQuote(classicQuote)
 
-        compareUniswapTrades(new UniswapTrade(buildTrade([trade]), opts), new UniswapTrade(routerTrade, opts))
+        compareJuiceSwapTrades(new JuiceSwapTrade(buildTrade([trade]), opts), new JuiceSwapTrade(routerTrade, opts))
       })
 
       it('v3 - multi pool erc20 <> erc20', async () => {
@@ -1660,7 +1660,7 @@ describe('Uniswap', () => {
         }
         const routerTrade = RouterTradeAdapter.fromClassicQuote(classicQuote)
 
-        compareUniswapTrades(new UniswapTrade(buildTrade([trade]), opts), new UniswapTrade(routerTrade, opts))
+        compareJuiceSwapTrades(new JuiceSwapTrade(buildTrade([trade]), opts), new JuiceSwapTrade(routerTrade, opts))
       })
 
       it('v4 - multi pool erc20 <> erc20', async () => {
@@ -1702,7 +1702,7 @@ describe('Uniswap', () => {
         }
         const routerTrade = RouterTradeAdapter.fromClassicQuote(classicQuote)
 
-        compareUniswapTrades(new UniswapTrade(buildTrade([trade]), opts), new UniswapTrade(routerTrade, opts))
+        compareJuiceSwapTrades(new JuiceSwapTrade(buildTrade([trade]), opts), new JuiceSwapTrade(routerTrade, opts))
       })
 
       // Mixed routes are only supported for exact input
@@ -1746,7 +1746,7 @@ describe('Uniswap', () => {
           }
           const routerTrade = RouterTradeAdapter.fromClassicQuote(classicQuote)
 
-          compareUniswapTrades(new UniswapTrade(buildTrade([trade]), opts), new UniswapTrade(routerTrade, opts))
+          compareJuiceSwapTrades(new JuiceSwapTrade(buildTrade([trade]), opts), new JuiceSwapTrade(routerTrade, opts))
         })
 
         it('v2/v3/v4 - mixed route erc20 <> erc20', async () => {
@@ -1795,7 +1795,7 @@ describe('Uniswap', () => {
           }
           const routerTrade = RouterTradeAdapter.fromClassicQuote(classicQuote)
 
-          compareUniswapTrades(new UniswapTrade(buildTrade([trade]), opts), new UniswapTrade(routerTrade, opts))
+          compareJuiceSwapTrades(new JuiceSwapTrade(buildTrade([trade]), opts), new JuiceSwapTrade(routerTrade, opts))
         })
       }
 
@@ -1843,7 +1843,7 @@ describe('Uniswap', () => {
         }
         const routerTrade = RouterTradeAdapter.fromClassicQuote(classicQuote)
 
-        compareUniswapTrades(new UniswapTrade(buildTrade([trade1, trade2]), opts), new UniswapTrade(routerTrade, opts))
+        compareJuiceSwapTrades(new JuiceSwapTrade(buildTrade([trade1, trade2]), opts), new JuiceSwapTrade(routerTrade, opts))
       })
     })
   }

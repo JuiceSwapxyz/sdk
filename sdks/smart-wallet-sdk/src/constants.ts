@@ -1,4 +1,4 @@
-import { ChainId } from '@uniswap/sdk-core'
+import { ChainId } from '@juiceswap/sdk-core'
 
 // https://eips.ethereum.org/EIPS/eip-7702
 export const DELEGATION_MAGIC_PREFIX = '0xef0100'

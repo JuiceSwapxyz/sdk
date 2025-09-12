@@ -1,9 +1,9 @@
 {
-  "name": "@uniswap/smart-wallet-sdk",
-  "description": "⚒️ An SDK for building applications with smart wallets on Uniswap",
-  "repository": "https://github.com/Uniswap/sdks.git",
+  "name": "@juiceswap/smart-wallet-sdk",
+  "description": "⚒️ An SDK for building applications with smart wallets on JuiceSwap",
+  "repository": "https://github.com/JuiceSwapxyz/sdk.git",
   "keywords": [
-    "uniswap",
+    "juiceswap",
     "ethereum",
     "smart-wallet"
   ],
@@ -36,7 +36,7 @@
   },
   "sideEffects": false,
   "dependencies": {
-    "@uniswap/sdk-core": "^7.6.0",
+    "@juiceswap/sdk-core": "^7.6.0",
     "viem": "^2.23.5"
   },
   "devDependencies": {

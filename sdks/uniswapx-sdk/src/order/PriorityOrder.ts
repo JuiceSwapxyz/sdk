@@ -4,11 +4,11 @@ import {
   PermitTransferFromData,
   SignatureTransfer,
   Witness,
-} from "@uniswap/permit2-sdk";
+} from "@juiceswap/permit2-sdk";
 import { BigNumber, ethers } from "ethers";
 
 import { MPS } from "../constants";
-import { getPermit2, ResolvedUniswapXOrder } from "../utils";
+import { getPermit2, ResolvedJuiceSwapXOrder } from "../utils";
 
 import {
   BlockOverrides,
@@ -294,7 +294,7 @@ export class UnsignedPriorityOrder implements OffChainOrder {
    * Returns the resolved order with the given options
    * @return The resolved order
    */
-  resolve(_options: PriorityOrderResolutionOptions): ResolvedUniswapXOrder {
+  resolve(_options: PriorityOrderResolutionOptions): ResolvedJuiceSwapXOrder {
     // no cosigner data so no resolution possible
     throw new Error("Method not implemented.");
   }
@@ -460,7 +460,7 @@ export class CosignedPriorityOrder extends UnsignedPriorityOrder {
   /**
    * @inheritdoc Order
    */
-  resolve(options: PriorityOrderResolutionOptions): ResolvedUniswapXOrder {
+  resolve(options: PriorityOrderResolutionOptions): ResolvedJuiceSwapXOrder {
     if (options.currentBlock) {
       if (
         this.info.cosignerData.auctionTargetBlock.gt(0) &&

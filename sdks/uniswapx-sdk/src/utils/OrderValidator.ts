@@ -2,20 +2,20 @@ import {
   OrderValidation,
   RelayOrderQuoter,
   SignedRelayOrder,
-  SignedUniswapXOrder,
-  UniswapXOrderQuoter,
+  SignedJuiceSwapXOrder,
+  JuiceSwapXOrderQuoter,
 } from "./OrderQuoter";
 
 /**
  * UniswapX order validator
  */
-export class OrderValidator extends UniswapXOrderQuoter {
-  async validate(order: SignedUniswapXOrder): Promise<OrderValidation> {
+export class OrderValidator extends JuiceSwapXOrderQuoter {
+  async validate(order: SignedJuiceSwapXOrder): Promise<OrderValidation> {
     return (await super.quote(order)).validation;
   }
 
   async validateBatch(
-    orders: SignedUniswapXOrder[]
+    orders: SignedJuiceSwapXOrder[]
   ): Promise<OrderValidation[]> {
     return (await super.quoteBatch(orders)).map((order) => order.validation);
   }

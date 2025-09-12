@@ -1,7 +1,7 @@
 import { BigNumber, ethers } from "ethers";
 import invariant from "tiny-invariant";
 
-import { OrderInfo, UniswapXOrder } from "../order";
+import { OrderInfo, JuiceSwapXOrder } from "../order";
 import { ValidationInfo } from "../order/validation";
 
 /**
@@ -72,5 +72,5 @@ export abstract class OrderBuilder {
     };
   }
 
-  abstract build(): UniswapXOrder;
+  abstract build(): JuiceSwapXOrder;
 }

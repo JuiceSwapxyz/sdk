@@ -6,7 +6,7 @@ import {
   validateAndParseAddress,
   Currency,
   NativeCurrency,
-} from '@uniswap/sdk-core'
+} from '@juiceswap/sdk-core'
 import JSBI from 'jsbi'
 import invariant from 'tiny-invariant'
 import { Position } from './entities/position'
@@ -463,7 +463,7 @@ export abstract class NonfungiblePositionManager {
   public static getPermitData(permit: NFTPermitValues, positionManagerAddress: string, chainId: number): NFTPermitData {
     return {
       domain: {
-        name: 'Uniswap V3 Positions NFT-V1',
+        name: 'JuiceSwap V3 Positions NFT-V1',
         chainId,
         version: '1',
         verifyingContract: positionManagerAddress,

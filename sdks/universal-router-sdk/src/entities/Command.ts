@@ -5,7 +5,7 @@ export type TradeConfig = {
 }
 
 export enum RouterActionType {
-  UniswapTrade = 'UniswapTrade',
+  JuiceSwapTrade = 'JuiceSwapTrade',
   UnwrapWETH = 'UnwrapWETH',
 }
 

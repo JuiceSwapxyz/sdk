@@ -1,4 +1,4 @@
-import { Percent, Token, CurrencyAmount, WETH9, Ether } from '@uniswap/sdk-core'
+import { Percent, Token, CurrencyAmount, WETH9, Ether } from '@juiceswap/sdk-core'
 import { ethers } from 'ethers'
 import { FeeAmount, TICK_SPACINGS } from './constants'
 import { Pool } from './entities/pool'
@@ -390,7 +390,7 @@ describe('NonfungiblePositionManager', () => {
       }
       const { domain, types, values } = NonfungiblePositionManager.getPermitData(permit, mockPositionManager, 1)
       expect(domain).toEqual({
-        name: 'Uniswap V3 Positions NFT-V1',
+        name: 'JuiceSwap V3 Positions NFT-V1',
         chainId: 1,
         version: '1',
         verifyingContract: mockPositionManager,

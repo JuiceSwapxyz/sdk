@@ -1,8 +1,8 @@
-import { MixedRouteSDK, Trade as RouterTrade } from '@uniswap/router-sdk'
-import { Currency, CurrencyAmount, Ether, Token, TradeType } from '@uniswap/sdk-core'
-import { Pair, Route as V2Route } from '@uniswap/v2-sdk'
-import { Pool as V3Pool, Route as V3Route, FeeAmount } from '@uniswap/v3-sdk'
-import { Pool as V4Pool, Route as V4Route } from '@uniswap/v4-sdk'
+import { MixedRouteSDK, Trade as RouterTrade } from '@juiceswap/router-sdk'
+import { Currency, CurrencyAmount, Ether, Token, TradeType } from '@juiceswap/sdk-core'
+import { Pair, Route as V2Route } from '@juiceswap/v2-sdk'
+import { Pool as V3Pool, Route as V3Route, FeeAmount } from '@juiceswap/v3-sdk'
+import { Pool as V4Pool, Route as V4Route } from '@juiceswap/v4-sdk'
 import { BigNumber } from 'ethers'
 import { ETH_ADDRESS, E_ETH_ADDRESS } from './constants'
 
@@ -87,7 +87,7 @@ export const isNativeCurrency = (address: string) =>
   address.toLowerCase() === ETH_ADDRESS.toLowerCase() || address.toLowerCase() === E_ETH_ADDRESS.toLowerCase()
 
 // Helper class to convert routing-specific quote entities to RouterTrade entities
-// the returned RouterTrade can then be used to build the UniswapTrade entity in this package
+// the returned RouterTrade can then be used to build the JuiceSwapTrade entity in this package
 export class RouterTradeAdapter {
   // Generate a RouterTrade using fields from a classic quote response
   static fromClassicQuote(quote: PartialClassicQuote) {

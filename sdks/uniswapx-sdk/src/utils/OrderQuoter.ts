@@ -19,7 +19,7 @@ import {
   RelayOrder,
   ResolvedRelayFee,
   TokenAmount,
-  UniswapXOrder,
+  JuiceSwapXOrder,
 } from "../order";
 import { parseExclusiveFillerData, ValidationType } from "../order/validation";
 
@@ -44,15 +44,15 @@ export enum OrderValidation {
   OK,
 }
 
-export interface ResolvedUniswapXOrder {
+export interface ResolvedJuiceSwapXOrder {
   input: TokenAmount;
   outputs: TokenAmount[];
 }
 
-export interface UniswapXOrderQuote {
+export interface JuiceSwapXOrderQuote {
   validation: OrderValidation;
   // not specified if validation is not OK
-  quote: ResolvedUniswapXOrder | undefined;
+  quote: ResolvedJuiceSwapXOrder | undefined;
 }
 
 export interface ResolvedRelayOrder {
@@ -113,8 +113,8 @@ const KNOWN_ERRORS: { [key: string]: OrderValidation } = {
   f3eb44e5: OrderValidation.InvalidGasPrice,
 };
 
-export interface SignedUniswapXOrder {
-  order: UniswapXOrder;
+export interface SignedJuiceSwapXOrder {
+  order: JuiceSwapXOrder;
   signature: string;
 }
 
@@ -140,7 +140,7 @@ interface OrderQuoter<TOrder, TQuote> {
 async function checkTerminalStates(
   provider: StaticJsonRpcProvider,
   nonceManager: NonceManager,
-  orders: (SignedUniswapXOrder | SignedRelayOrder)[],
+  orders: (SignedJuiceSwapXOrder | SignedRelayOrder)[],
   validations: OrderValidation[]
 ): Promise<OrderValidation[]> {
   return await Promise.all(
@@ -172,8 +172,8 @@ async function checkTerminalStates(
 /**
  * UniswapX order quoter
  */
-export class UniswapXOrderQuoter
-  implements OrderQuoter<SignedUniswapXOrder, UniswapXOrderQuote>
+export class JuiceSwapXOrderQuoter
+  implements OrderQuoter<SignedJuiceSwapXOrder, JuiceSwapXOrderQuote>
 {
   protected quoter: OrderQuoterContract;
 
@@ -194,20 +194,20 @@ export class UniswapXOrderQuoter
     }
   }
 
-  async quote(order: SignedUniswapXOrder): Promise<UniswapXOrderQuote> {
+  async quote(order: SignedJuiceSwapXOrder): Promise<JuiceSwapXOrderQuote> {
     return (await this.quoteBatch([order]))[0];
   }
 
   async quoteBatch(
-    orders: SignedUniswapXOrder[]
-  ): Promise<UniswapXOrderQuote[]> {
+    orders: SignedJuiceSwapXOrder[]
+  ): Promise<JuiceSwapXOrderQuote[]> {
     const results = await this.getMulticallResults(
       "quote",
       orders
     );
     const validations = await this.getValidations(orders, results);
 
-    const quotes: (ResolvedUniswapXOrder | undefined)[] = results.map(
+    const quotes: (ResolvedJuiceSwapXOrder | undefined)[] = results.map(
       ({ success, returnData }) => {
         if (!success) {
           return undefined;
@@ -227,7 +227,7 @@ export class UniswapXOrderQuoter
   }
 
   private async getValidations(
-    orders: SignedUniswapXOrder[],
+    orders: SignedJuiceSwapXOrder[],
     results: MulticallResult[]
   ): Promise<OrderValidation[]> {
     const validations = results.map((result, idx) => {
