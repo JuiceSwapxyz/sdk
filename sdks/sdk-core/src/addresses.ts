@@ -417,15 +417,15 @@ const SONEIUM_ADDRESSES: ChainAddresses = {
   v4QuoterAddress: '0x3972c00f7ed4885e145823eb7c655375d275a1c5',
 }
 
-// Citrea Testnet addresses - placeholders until Uniswap V3 is deployed
+// Citrea Testnet addresses
 const CITREA_TESTNET_ADDRESSES: ChainAddresses = {
-  v3CoreFactoryAddress: '0x0000000000000000000000000000000000000000',
-  multicallAddress: '0x0000000000000000000000000000000000000000',
-  quoterAddress: '0x0000000000000000000000000000000000000000',
-  v3MigratorAddress: '0x0000000000000000000000000000000000000000',
-  nonfungiblePositionManagerAddress: '0x0000000000000000000000000000000000000000',
-  tickLensAddress: '0x0000000000000000000000000000000000000000',
-  swapRouter02Address: '0x0000000000000000000000000000000000000000',
+  v3CoreFactoryAddress: '0x6832283eEA5a9A3C4384A5D9a06Db0ce6FE9C79E',
+  multicallAddress: '0x0000000000000000000000000000000000000000', // TODO: Add multicall address when available
+  quoterAddress: '0x8068F946D23B18Ab36Bc09A7DFF177b37525aB20',
+  v3MigratorAddress: '0x0000000000000000000000000000000000000000', // TODO: Add migrator address when available
+  nonfungiblePositionManagerAddress: '0xe46616BED47317653EE3B7794fC171F4444Ee1c5',
+  tickLensAddress: '0x0000000000000000000000000000000000000000', // TODO: Add tick lens address when available
+  swapRouter02Address: '0x610c98EAD0df13EA906854b6041122e8A8D14413',
 }
 
 export const CHAIN_TO_ADDRESSES_MAP: Record<SupportedChainsType, ChainAddresses> = {
