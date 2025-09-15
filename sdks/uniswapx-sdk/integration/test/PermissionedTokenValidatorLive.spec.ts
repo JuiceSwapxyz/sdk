@@ -2,7 +2,7 @@ import { expect } from 'chai';
 import { ethers } from 'hardhat';
 import { PermissionedTokenValidator } from '../../src/utils/PermissionedTokenValidator';
 import { PERMISSIONED_TOKENS } from '../../src/constants';
-import { ChainId } from '@uniswap/sdk-core';
+import { ChainId } from '@juiceswapxyz/sdk-core';
 
 // FORK_URL should be set to a mainnet RPC URL in the .env file
 // FORK_URL=https://mainnet.infura.io/v3/YOUR_PROJECT_ID
