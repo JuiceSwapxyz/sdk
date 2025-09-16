@@ -1,6 +1,6 @@
-import { Ether, Token } from '@uniswap/sdk-core'
-import { encodeSqrtRatioX96 } from '@uniswap/v3-sdk'
-import { Pool as V4Pool } from '@uniswap/v4-sdk'
+import { Ether, Token } from '@juiceswapxyz/sdk-core'
+import { encodeSqrtRatioX96 } from '@juiceswapxyz/v3-sdk'
+import { Pool as V4Pool } from '@juiceswapxyz/v4-sdk'
 import { ADDRESS_ZERO } from '../constants'
 import { getPathCurrency } from './pathCurrency'
 
