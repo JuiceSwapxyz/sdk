@@ -1,9 +1,10 @@
 {
-  "name": "@uniswap/v3-sdk",
-  "description": "⚒️ An SDK for building applications on top of Uniswap V3",
-  "repository": "https://github.com/Uniswap/sdks.git",
+  "name": "@juiceswapxyz/v3-sdk",
+  "version": "0.0.1-beta.0",
+  "description": "⚒️ An SDK for building applications on top of JuiceSwap V3",
+  "repository": "https://github.com/JuiceSwapxyz/sdk.git",
   "keywords": [
-    "uniswap",
+    "juiceswap",
     "ethereum"
   ],
   "license": "MIT",
@@ -27,7 +28,7 @@
   "dependencies": {
     "@ethersproject/abi": "^5.5.0",
     "@ethersproject/solidity": "^5.0.9",
-    "@uniswap/sdk-core": "^7.7.1",
+    "@juiceswapxyz/sdk-core": "0.0.1-beta.0",
     "@uniswap/swap-router-contracts": "^1.3.0",
     "@uniswap/v3-periphery": "^1.1.1",
     "@uniswap/v3-staker": "1.0.0",
@@ -54,8 +55,7 @@
     "singleQuote": true
   },
   "publishConfig": {
-    "access": "public",
-    "provenance": true
+    "access": "public"
   },
   "release": {
     "extends": "semantic-release-monorepo",
