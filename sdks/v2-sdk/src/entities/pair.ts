@@ -13,6 +13,9 @@ import {
   FACTORY_ADDRESS_MAP,
   FIVE,
   INIT_CODE_HASH,
+  INIT_CODE_HASH_MAP,
+  LP_TOKEN_NAME_MAP,
+  LP_TOKEN_SYMBOL_MAP,
   MINIMUM_LIQUIDITY,
   ONE,
   ONE_HUNDRED_PERCENT,
@@ -25,16 +28,18 @@ export const computePairAddress = ({
   factoryAddress,
   tokenA,
   tokenB,
+  initCodeHash,
 }: {
   factoryAddress: string
   tokenA: Token
   tokenB: Token
+  initCodeHash?: string
 }): string => {
   const [token0, token1] = tokenA.sortsBefore(tokenB) ? [tokenA, tokenB] : [tokenB, tokenA] // does safety checks
   return getCreate2Address(
     factoryAddress,
     keccak256(['bytes'], [pack(['address', 'address'], [token0.address, token1.address])]),
-    INIT_CODE_HASH
+    initCodeHash ?? INIT_CODE_HASH
   )
 }
 export class Pair {
@@ -43,19 +48,21 @@ export class Pair {
 
   public static getAddress(tokenA: Token, tokenB: Token): string {
     const factoryAddress = FACTORY_ADDRESS_MAP[tokenA.chainId] ?? FACTORY_ADDRESS
-    return computePairAddress({ factoryAddress, tokenA, tokenB })
+    const initCodeHash = INIT_CODE_HASH_MAP[tokenA.chainId] ?? INIT_CODE_HASH
+    return computePairAddress({ factoryAddress, tokenA, tokenB, initCodeHash })
   }
 
   public constructor(currencyAmountA: CurrencyAmount<Token>, tokenAmountB: CurrencyAmount<Token>) {
     const tokenAmounts = currencyAmountA.currency.sortsBefore(tokenAmountB.currency) // does safety checks
       ? [currencyAmountA, tokenAmountB]
       : [tokenAmountB, currencyAmountA]
+    const chainId = tokenAmounts[0].currency.chainId
     this.liquidityToken = new Token(
-      tokenAmounts[0].currency.chainId,
+      chainId,
       Pair.getAddress(tokenAmounts[0].currency, tokenAmounts[1].currency),
       18,
-      'UNI-V2',
-      'Uniswap V2'
+      LP_TOKEN_SYMBOL_MAP[chainId] ?? 'UNI-V2',
+      LP_TOKEN_NAME_MAP[chainId] ?? 'Uniswap V2'
     )
     this.tokenAmounts = tokenAmounts as [CurrencyAmount<Token>, CurrencyAmount<Token>]
   }
