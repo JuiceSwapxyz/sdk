@@ -61,6 +61,7 @@ export const V2_FACTORY_ADDRESSES: AddressMap = {
   [ChainId.UNICHAIN]: '0x1f98400000000000000000000000000000000002',
   [ChainId.MONAD_TESTNET]: '0x733e88f248b742db6c14c0b1713af5ad7fdd59d0',
   [ChainId.SONEIUM]: '0x97febbc2adbd5644ba22736e962564b23f5828ce',
+  [ChainId.CITREA_TESTNET]: '0x81b159FE82d8ECC8ff4801BB687166972dF3f144',
 }
 /**
  * @deprecated use V2_ROUTER_ADDRESSES instead
@@ -83,6 +84,7 @@ export const V2_ROUTER_ADDRESSES: AddressMap = {
   [ChainId.UNICHAIN]: '0x284f11109359a7e1306c3e447ef14d38400063ff',
   [ChainId.MONAD_TESTNET]: '0xfb8e1c3b833f9e67a71c859a132cf783b645e436',
   [ChainId.SONEIUM]: '0x273f68c234fa55b550b40e563c4a488e0d334320',
+  [ChainId.CITREA_TESTNET]: '0x48bA9db1EAcDB7C97B7B601c1E213F29E996d974',
 }
 
 // Networks that share most of the same addresses i.e. Mainnet, Goerli, Optimism, Arbitrum, Polygon
@@ -417,13 +419,13 @@ const SONEIUM_ADDRESSES: ChainAddresses = {
   v4QuoterAddress: '0x3972c00f7ed4885e145823eb7c655375d275a1c5',
 }
 
-// Citrea Testnet addresses - V3 only
+// Citrea Testnet addresses - V2 + V3
 const CITREA_TESTNET_ADDRESSES: ChainAddresses = {
-  v3CoreFactoryAddress: '0x6832283eEA5a9A3C4384A5D9a06Db0ce6FE9C79E',
-  multicallAddress: '0x523A5dbC640Ed57b0Df84f1Df0a77f8AC32D194F',
-  quoterAddress: '0x8068F946D23B18Ab36Bc09A7DFF177b37525aB20',
-  nonfungiblePositionManagerAddress: '0xe46616BED47317653EE3B7794fC171F4444Ee1c5',
-  swapRouter02Address: '0x610c98EAD0df13EA906854b6041122e8A8D14413',
+  v3CoreFactoryAddress: '0x9136D17Ec096AAd031D442a796cd5984128cF0b2',
+  multicallAddress: '0xE8C31C8c482442bf4A608Eb1DAC1Df7FA239731D',
+  quoterAddress: '0x14985Bc2967Dd38B1e71540d926F2c8f0dA0a1B5',
+  nonfungiblePositionManagerAddress: '0x56D63E0F763b29F62bb7242420d028F86e9402E1',
+  swapRouter02Address: '0x0214b0222ffB57C6a04310B4F42Cf7979D67f2C8',
 }
 
 export const CHAIN_TO_ADDRESSES_MAP: Record<SupportedChainsType, ChainAddresses> = {
