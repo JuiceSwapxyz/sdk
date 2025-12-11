@@ -426,6 +426,8 @@ const CITREA_TESTNET_ADDRESSES: ChainAddresses = {
   quoterAddress: '0x14985Bc2967Dd38B1e71540d926F2c8f0dA0a1B5',
   nonfungiblePositionManagerAddress: '0x56D63E0F763b29F62bb7242420d028F86e9402E1',
   swapRouter02Address: '0x0214b0222ffB57C6a04310B4F42Cf7979D67f2C8',
+  tickLensAddress: '0xD2C796E11baf2Ec95ee2a9796760FA51c0bb854D',
+  v3MigratorAddress: '0x2936DF6c0fa9A6C88744f035B3801044780F49c5',
 }
 
 export const CHAIN_TO_ADDRESSES_MAP: Record<SupportedChainsType, ChainAddresses> = {
