@@ -1,6 +1,6 @@
 {
   "name": "@juiceswapxyz/v3-sdk",
-  "version": "0.1.0-beta.0",
+  "version": "0.1.1-beta.0",
   "description": "⚒️ An SDK for building applications on top of JuiceSwap V3",
   "repository": "https://github.com/JuiceSwapxyz/sdk.git",
   "keywords": [
