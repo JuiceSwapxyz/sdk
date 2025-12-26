@@ -420,12 +420,13 @@ const SONEIUM_ADDRESSES: ChainAddresses = {
 }
 
 // Citrea Testnet addresses - V2 + V3
+// Source of truth: deploy-v3/deployments/citreaTestnet/dex.json
 const CITREA_TESTNET_ADDRESSES: ChainAddresses = {
   v3CoreFactoryAddress: '0x9136D17Ec096AAd031D442a796cd5984128cF0b2',
   multicallAddress: '0xE8C31C8c482442bf4A608Eb1DAC1Df7FA239731D',
   quoterAddress: '0x14985Bc2967Dd38B1e71540d926F2c8f0dA0a1B5',
   nonfungiblePositionManagerAddress: '0x56D63E0F763b29F62bb7242420d028F86e9402E1',
-  swapRouter02Address: '0x0214b0222ffB57C6a04310B4F42Cf7979D67f2C8',
+  swapRouter02Address: '0x2d11a82633adD5b8742311fDa0E751264d093E7f',
   tickLensAddress: '0xD2C796E11baf2Ec95ee2a9796760FA51c0bb854D',
   v3MigratorAddress: '0x2936DF6c0fa9A6C88744f035B3801044780F49c5',
 }
