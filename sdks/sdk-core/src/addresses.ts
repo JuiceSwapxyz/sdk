@@ -13,6 +13,9 @@ type ChainAddresses = {
   mixedRouteQuoterV1Address?: string
   mixedRouteQuoterV2Address?: string
 
+  // Proxy admin for upgradeable contracts (e.g., position descriptor)
+  proxyAdminAddress?: string
+
   // v4
   v4PoolManagerAddress?: string
   v4PositionManagerAddress?: string
@@ -429,6 +432,7 @@ const CITREA_TESTNET_ADDRESSES: ChainAddresses = {
   swapRouter02Address: '0x2d11a82633adD5b8742311fDa0E751264d093E7f',
   tickLensAddress: '0xD2C796E11baf2Ec95ee2a9796760FA51c0bb854D',
   v3MigratorAddress: '0x2936DF6c0fa9A6C88744f035B3801044780F49c5',
+  proxyAdminAddress: '0xBc6dD1660166C63bd41ec6943E4Ab81fA327B821',
 }
 
 export const CHAIN_TO_ADDRESSES_MAP: Record<SupportedChainsType, ChainAddresses> = {
