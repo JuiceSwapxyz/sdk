@@ -106,5 +106,6 @@
       "require": "./dist/cjs/src/index.js"
     }
   },
-  "sideEffects": false
+  "sideEffects": false,
+  "stableVersion": "0.1.0-beta.0"
 }

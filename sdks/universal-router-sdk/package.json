@@ -100,5 +100,6 @@
   "installConfig": {
     "hoistingLimits": "workspaces"
   },
-  "sideEffects": false
+  "sideEffects": false,
+  "stableVersion": "0.1.2-beta.0"
 }
