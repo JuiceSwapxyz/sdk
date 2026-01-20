@@ -441,7 +441,7 @@ const CITREA_TESTNET_ADDRESSES: ChainAddresses = {
   proxyAdminAddress: '0xBc6dD1660166C63bd41ec6943E4Ab81fA327B821',
 
   // JuiceSwap contracts (deployed 2026-01-09)
-  juiceSwapGatewayAddress: '0xAa38DF03b3B62195723ED15987D58D835D7049F5',
+  juiceSwapGatewayAddress: '0x44B89B1a71f72aB6FeFa807686511f3589163704',
   juiceSwapGovernorAddress: '0x205903c54C56bCED8C97f2DC250BA53d715174e9',
   juiceSwapFeeCollectorAddress: '0xc3d817C394d55aB57f5bF0Fc5C6878ccE033E32a',
 }
