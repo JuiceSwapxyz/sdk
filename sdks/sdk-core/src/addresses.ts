@@ -440,8 +440,8 @@ const CITREA_TESTNET_ADDRESSES: ChainAddresses = {
   v3MigratorAddress: '0x2936DF6c0fa9A6C88744f035B3801044780F49c5',
   proxyAdminAddress: '0xBc6dD1660166C63bd41ec6943E4Ab81fA327B821',
 
-  // JuiceSwap contracts (deployed 2026-01-09)
-  juiceSwapGatewayAddress: '0x44B89B1a71f72aB6FeFa807686511f3589163704',
+  // JuiceSwap contracts (deployed 2026-01-22)
+  juiceSwapGatewayAddress: '0x3b59BCd4eFe392d715f4c57fA4218BFCAD5FB153',
   juiceSwapGovernorAddress: '0x205903c54C56bCED8C97f2DC250BA53d715174e9',
   juiceSwapFeeCollectorAddress: '0xc3d817C394d55aB57f5bF0Fc5C6878ccE033E32a',
 }
