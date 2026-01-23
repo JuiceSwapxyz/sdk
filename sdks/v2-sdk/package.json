@@ -1,7 +1,7 @@
 {
   "name": "@juiceswapxyz/v2-sdk",
   "description": "🛠 An SDK for building applications on top of JuiceSwap V2",
-  "version": "0.0.1-beta.0",
+  "version": "0.1.2-beta.0",
   "repository": "https://github.com/JuiceSwapxyz/sdk.git",
   "keywords": [
     "juiceswap",
@@ -27,7 +27,7 @@
   "dependencies": {
     "@ethersproject/address": "^5.0.2",
     "@ethersproject/solidity": "^5.0.9",
-    "@juiceswapxyz/sdk-core": "0.0.1-beta.0",
+    "@juiceswapxyz/sdk-core": "0.1.5-beta.0",
     "tiny-invariant": "^1.1.0",
     "tiny-warning": "^1.0.3"
   },
@@ -82,5 +82,6 @@
         }
       ]
     ]
-  }
+  },
+  "stableVersion": "0.1.0-beta.0"
 }

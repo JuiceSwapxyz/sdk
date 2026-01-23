@@ -11,6 +11,8 @@ export function poolInitCodeHash(chainId?: ChainId): string {
   switch (chainId) {
     case ChainId.ZKSYNC:
       return '0x010013f177ea1fcbc4520f9a3ca7cd2d1d77959e05aa66484027cb38e712aeed'
+    case ChainId.CITREA_TESTNET:
+      return '0x851d77a45b8b9a205fb9f44cb829cceba85282714d2603d601840640628a3da7'
     default:
       return POOL_INIT_CODE_HASH
   }

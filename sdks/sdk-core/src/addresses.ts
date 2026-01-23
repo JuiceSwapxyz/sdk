@@ -13,11 +13,19 @@ type ChainAddresses = {
   mixedRouteQuoterV1Address?: string
   mixedRouteQuoterV2Address?: string
 
+  // Proxy admin for upgradeable contracts (e.g., position descriptor)
+  proxyAdminAddress?: string
+
   // v4
   v4PoolManagerAddress?: string
   v4PositionManagerAddress?: string
   v4StateView?: string
   v4QuoterAddress?: string
+
+  // JuiceSwap-specific contracts
+  juiceSwapGatewayAddress?: string
+  juiceSwapGovernorAddress?: string
+  juiceSwapFeeCollectorAddress?: string
 }
 
 const DEFAULT_NETWORKS = [ChainId.MAINNET, ChainId.GOERLI, ChainId.SEPOLIA]
@@ -419,13 +427,23 @@ const SONEIUM_ADDRESSES: ChainAddresses = {
   v4QuoterAddress: '0x3972c00f7ed4885e145823eb7c655375d275a1c5',
 }
 
-// Citrea Testnet addresses - V2 + V3
+// Citrea Testnet addresses - V2 + V3 + JuiceSwap
+// Source of truth: deploy-v3/deployments/citreaTestnet/dex.json
+// JuiceSwap contracts: smart-contracts/deployments/testnet/
 const CITREA_TESTNET_ADDRESSES: ChainAddresses = {
   v3CoreFactoryAddress: '0x9136D17Ec096AAd031D442a796cd5984128cF0b2',
   multicallAddress: '0xE8C31C8c482442bf4A608Eb1DAC1Df7FA239731D',
   quoterAddress: '0x14985Bc2967Dd38B1e71540d926F2c8f0dA0a1B5',
   nonfungiblePositionManagerAddress: '0x56D63E0F763b29F62bb7242420d028F86e9402E1',
-  swapRouter02Address: '0x0214b0222ffB57C6a04310B4F42Cf7979D67f2C8',
+  swapRouter02Address: '0x2d11a82633adD5b8742311fDa0E751264d093E7f',
+  tickLensAddress: '0xD2C796E11baf2Ec95ee2a9796760FA51c0bb854D',
+  v3MigratorAddress: '0x2936DF6c0fa9A6C88744f035B3801044780F49c5',
+  proxyAdminAddress: '0xBc6dD1660166C63bd41ec6943E4Ab81fA327B821',
+
+  // JuiceSwap contracts (deployed 2026-01-22)
+  juiceSwapGatewayAddress: '0x3b59BCd4eFe392d715f4c57fA4218BFCAD5FB153',
+  juiceSwapGovernorAddress: '0x205903c54C56bCED8C97f2DC250BA53d715174e9',
+  juiceSwapFeeCollectorAddress: '0xc3d817C394d55aB57f5bF0Fc5C6878ccE033E32a',
 }
 
 export const CHAIN_TO_ADDRESSES_MAP: Record<SupportedChainsType, ChainAddresses> = {
@@ -564,3 +582,28 @@ export const SWAP_ROUTER_02_ADDRESSES = (chainId: number) => {
   }
   return ''
 }
+
+/* JuiceSwap Contract Addresses */
+export const JUICESWAP_GATEWAY_ADDRESSES: AddressMap = SUPPORTED_CHAINS.reduce<AddressMap>((memo, chainId) => {
+  const juiceSwapGatewayAddress = CHAIN_TO_ADDRESSES_MAP[chainId].juiceSwapGatewayAddress
+  if (juiceSwapGatewayAddress) {
+    memo[chainId] = juiceSwapGatewayAddress
+  }
+  return memo
+}, {})
+
+export const JUICESWAP_GOVERNOR_ADDRESSES: AddressMap = SUPPORTED_CHAINS.reduce<AddressMap>((memo, chainId) => {
+  const juiceSwapGovernorAddress = CHAIN_TO_ADDRESSES_MAP[chainId].juiceSwapGovernorAddress
+  if (juiceSwapGovernorAddress) {
+    memo[chainId] = juiceSwapGovernorAddress
+  }
+  return memo
+}, {})
+
+export const JUICESWAP_FEE_COLLECTOR_ADDRESSES: AddressMap = SUPPORTED_CHAINS.reduce<AddressMap>((memo, chainId) => {
+  const juiceSwapFeeCollectorAddress = CHAIN_TO_ADDRESSES_MAP[chainId].juiceSwapFeeCollectorAddress
+  if (juiceSwapFeeCollectorAddress) {
+    memo[chainId] = juiceSwapFeeCollectorAddress
+  }
+  return memo
+}, {})
