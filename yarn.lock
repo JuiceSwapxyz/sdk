@@ -2481,10 +2481,10 @@ __metadata:
   resolution: "@juiceswapxyz/router-sdk@workspace:sdks/router-sdk"
   dependencies:
     "@ethersproject/abi": ^5.5.0
-    "@juiceswapxyz/sdk-core": 0.1.5-beta.0
-    "@juiceswapxyz/v2-sdk": 0.1.2-beta.0
-    "@juiceswapxyz/v3-sdk": 0.1.3-beta.0
-    "@juiceswapxyz/v4-sdk": 0.1.3-beta.0
+    "@juiceswapxyz/sdk-core": 0.1.11-beta.0
+    "@juiceswapxyz/v2-sdk": 0.1.3-beta.0
+    "@juiceswapxyz/v3-sdk": 0.1.4-beta.0
+    "@juiceswapxyz/v4-sdk": 0.1.4-beta.0
     "@types/jest": ^24.0.25
     "@uniswap/swap-router-contracts": ^1.3.0
     prettier: ^2.4.1
@@ -2645,6 +2645,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@juiceswapxyz/v2-sdk@npm:0.1.3-beta.0":
+  version: 0.1.3-beta.0
+  resolution: "@juiceswapxyz/v2-sdk@npm:0.1.3-beta.0"
+  dependencies:
+    "@ethersproject/address": ^5.0.2
+    "@ethersproject/solidity": ^5.0.9
+    "@juiceswapxyz/sdk-core": 0.1.11-beta.0
+    tiny-invariant: ^1.1.0
+    tiny-warning: ^1.0.3
+  checksum: 6631c8519bf7172a9182d548dcef8171ba151fdfd58e6da49fbd88ed553df629eb73a7ccae71db294114e8beffcf91ed16226d7569297b1a744abd6df8e58b37
+  languageName: node
+  linkType: hard
+
 "@juiceswapxyz/v2-sdk@workspace:sdks/v2-sdk":
   version: 0.0.0-use.local
   resolution: "@juiceswapxyz/v2-sdk@workspace:sdks/v2-sdk"
@@ -2739,6 +2752,19 @@ __metadata:
     tiny-invariant: ^1.1.0
     tiny-warning: ^1.0.3
   checksum: fbe5e6dc91d9c8025e287232afbbb1b8c244d9324b385baed106bb24ce16871744e821de8c0bdd9393a024a8d4395a53f616ea7dfbdd5c111051a6be95b23c2a
+  languageName: node
+  linkType: hard
+
+"@juiceswapxyz/v4-sdk@npm:0.1.4-beta.0":
+  version: 0.1.4-beta.0
+  resolution: "@juiceswapxyz/v4-sdk@npm:0.1.4-beta.0"
+  dependencies:
+    "@ethersproject/solidity": ^5.0.9
+    "@juiceswapxyz/sdk-core": 0.1.11-beta.0
+    "@juiceswapxyz/v3-sdk": 0.1.4-beta.0
+    tiny-invariant: ^1.1.0
+    tiny-warning: ^1.0.3
+  checksum: 1438717f5e7d920e497c2e648b3661b1ef5de886699e872831f363b087d9d440cbd4fa46ae118c1ee9acaf047e0bcd73577ab5d672c7a64a8dcb25326914dc4c
   languageName: node
   linkType: hard
 
