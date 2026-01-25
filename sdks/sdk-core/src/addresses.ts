@@ -69,7 +69,7 @@ export const V2_FACTORY_ADDRESSES: AddressMap = {
   [ChainId.UNICHAIN]: '0x1f98400000000000000000000000000000000002',
   [ChainId.MONAD_TESTNET]: '0x733e88f248b742db6c14c0b1713af5ad7fdd59d0',
   [ChainId.SONEIUM]: '0x97febbc2adbd5644ba22736e962564b23f5828ce',
-  [ChainId.CITREA_TESTNET]: '0x81b159FE82d8ECC8ff4801BB687166972dF3f144',
+  [ChainId.CITREA_TESTNET]: '0xfc271758732F5eD3ddF19727B7E29BFC3325370d',
   [ChainId.CITREA_MAINNET]: '0x0000000000000000000000000000000000000000', // TODO: Update after deployment
 }
 /**
@@ -93,7 +93,7 @@ export const V2_ROUTER_ADDRESSES: AddressMap = {
   [ChainId.UNICHAIN]: '0x284f11109359a7e1306c3e447ef14d38400063ff',
   [ChainId.MONAD_TESTNET]: '0xfb8e1c3b833f9e67a71c859a132cf783b645e436',
   [ChainId.SONEIUM]: '0x273f68c234fa55b550b40e563c4a488e0d334320',
-  [ChainId.CITREA_TESTNET]: '0x48bA9db1EAcDB7C97B7B601c1E213F29E996d974',
+  [ChainId.CITREA_TESTNET]: '0x37164703eF51EcB49C9a565C233a277003aE483f',
   [ChainId.CITREA_MAINNET]: '0x0000000000000000000000000000000000000000', // TODO: Update after deployment
 }
 
@@ -430,22 +430,22 @@ const SONEIUM_ADDRESSES: ChainAddresses = {
 }
 
 // Citrea Testnet addresses - V2 + V3 + JuiceSwap
-// Source of truth: deploy-v3/deployments/citreaTestnet/dex.json
+// Source of truth: deploy-v3/deployments/citreaTestnet/dex.json (deployed 2026-01-25)
 // JuiceSwap contracts: smart-contracts/deployments/testnet/
 const CITREA_TESTNET_ADDRESSES: ChainAddresses = {
-  v3CoreFactoryAddress: '0x9136D17Ec096AAd031D442a796cd5984128cF0b2',
-  multicallAddress: '0xE8C31C8c482442bf4A608Eb1DAC1Df7FA239731D',
-  quoterAddress: '0x14985Bc2967Dd38B1e71540d926F2c8f0dA0a1B5',
-  nonfungiblePositionManagerAddress: '0x56D63E0F763b29F62bb7242420d028F86e9402E1',
-  swapRouter02Address: '0x2d11a82633adD5b8742311fDa0E751264d093E7f',
-  tickLensAddress: '0xD2C796E11baf2Ec95ee2a9796760FA51c0bb854D',
-  v3MigratorAddress: '0x2936DF6c0fa9A6C88744f035B3801044780F49c5',
-  proxyAdminAddress: '0xBc6dD1660166C63bd41ec6943E4Ab81fA327B821',
+  v3CoreFactoryAddress: '0xdd6Db52dB41CE2C03002bB1adFdCC8E91C594238',
+  multicallAddress: '0xC1bD4864F267f8B032224817d33A7b53eD866F5e',
+  quoterAddress: '0x719a4C7B49E5361a39Dc83c23b353CA220D9B99d',
+  nonfungiblePositionManagerAddress: '0x86e7A161cb9696E6d438c0c77dd18244efa2B8b1',
+  swapRouter02Address: '0x26C106BC45E0dd599cbDD871605497B2Fc87c185',
+  tickLensAddress: '0xa0Fe847227eE5076bC5D1D3c605261837fa047fB',
+  v3MigratorAddress: '0xfa83918a27F9cC32619ae1A85f7e1Ae3e3F6Ceb8',
+  proxyAdminAddress: '0xCdc7C81784F9D3b4061e754477BEA077B7B4cCa4',
 
-  // JuiceSwap contracts (deployed 2026-01-22)
-  juiceSwapGatewayAddress: '0x3b59BCd4eFe392d715f4c57fA4218BFCAD5FB153',
-  juiceSwapGovernorAddress: '0x205903c54C56bCED8C97f2DC250BA53d715174e9',
-  juiceSwapFeeCollectorAddress: '0xc3d817C394d55aB57f5bF0Fc5C6878ccE033E32a',
+  // JuiceSwap contracts - TODO: Redeploy after DEX redeployment (2026-01-25)
+  juiceSwapGatewayAddress: '0x0000000000000000000000000000000000000000',
+  juiceSwapGovernorAddress: '0x0000000000000000000000000000000000000000',
+  juiceSwapFeeCollectorAddress: '0x0000000000000000000000000000000000000000',
 }
 
 // Citrea Mainnet addresses - V2 + V3 + JuiceSwap
