@@ -2462,17 +2462,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@juiceswapxyz/router-sdk@npm:0.1.4-beta.0":
-  version: 0.1.4-beta.0
-  resolution: "@juiceswapxyz/router-sdk@npm:0.1.4-beta.0"
+"@juiceswapxyz/router-sdk@npm:0.1.5-beta.0":
+  version: 0.1.5-beta.0
+  resolution: "@juiceswapxyz/router-sdk@npm:0.1.5-beta.0"
   dependencies:
     "@ethersproject/abi": ^5.5.0
-    "@juiceswapxyz/sdk-core": 0.1.5-beta.0
-    "@juiceswapxyz/v2-sdk": 0.1.2-beta.0
-    "@juiceswapxyz/v3-sdk": 0.1.3-beta.0
-    "@juiceswapxyz/v4-sdk": 0.1.3-beta.0
+    "@juiceswapxyz/sdk-core": 0.1.11-beta.0
+    "@juiceswapxyz/v2-sdk": 0.1.3-beta.0
+    "@juiceswapxyz/v3-sdk": 0.1.4-beta.0
+    "@juiceswapxyz/v4-sdk": 0.1.4-beta.0
     "@uniswap/swap-router-contracts": ^1.3.0
-  checksum: 442837468d630b1b29481b1e9033af70bc6f23a3c6f8719a91ef834bcf2b00ecd955fdc80683476bbdcacf681989341a3f1e141c22e596bf4bb71b4dbea1b476
+  checksum: e332ea001763f3e7749a51a2876270d6bb3df217de8292b9ab7e14f15ef1325b164d97a1be137dbdc73e64f1e09fb1dda24a0b140140d5792e1db784dd3614a1
   languageName: node
   linkType: hard
 
@@ -2523,23 +2523,6 @@ __metadata:
     tiny-invariant: ^1.1.0
     toformat: ^2.0.0
   checksum: a82d957014ddafc8e307883efb2cd89f743247d14d8425ed491ad14ddfc3416bb94554c9a66e47d6d19ae2bdc42786059a0aaf590ebadd9a027cc362b264e4e1
-  languageName: node
-  linkType: hard
-
-"@juiceswapxyz/sdk-core@npm:0.1.5-beta.0":
-  version: 0.1.5-beta.0
-  resolution: "@juiceswapxyz/sdk-core@npm:0.1.5-beta.0"
-  dependencies:
-    "@ethersproject/address": ^5.0.2
-    "@ethersproject/bytes": ^5.7.0
-    "@ethersproject/keccak256": 5.7.0
-    "@ethersproject/strings": 5.7.0
-    big.js: ^5.2.2
-    decimal.js-light: ^2.5.0
-    jsbi: ^3.1.4
-    tiny-invariant: ^1.1.0
-    toformat: ^2.0.0
-  checksum: d8c8d6ceabddfdb1e40f2cc094869ff74ff41b40ddeb99c911855ba4856916f51dfa6685402ec8459e4b4d23d6763b55a3b91064fc969bc3f7347fc3e20b8f25
   languageName: node
   linkType: hard
 
@@ -2603,11 +2586,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@juiceswapxyz/universal-router-sdk@workspace:sdks/universal-router-sdk"
   dependencies:
-    "@juiceswapxyz/router-sdk": 0.1.4-beta.0
-    "@juiceswapxyz/sdk-core": 0.1.5-beta.0
-    "@juiceswapxyz/v2-sdk": 0.1.2-beta.0
-    "@juiceswapxyz/v3-sdk": 0.1.3-beta.0
-    "@juiceswapxyz/v4-sdk": 0.1.3-beta.0
+    "@juiceswapxyz/router-sdk": 0.1.5-beta.0
+    "@juiceswapxyz/sdk-core": 0.1.11-beta.0
+    "@juiceswapxyz/v2-sdk": 0.1.3-beta.0
+    "@juiceswapxyz/v3-sdk": 0.1.4-beta.0
+    "@juiceswapxyz/v4-sdk": 0.1.4-beta.0
     "@openzeppelin/contracts": 4.7.0
     "@types/chai": ^4.3.3
     "@types/mocha": ^9.1.1
@@ -2631,19 +2614,6 @@ __metadata:
     typescript: ^4.3.3
   languageName: unknown
   linkType: soft
-
-"@juiceswapxyz/v2-sdk@npm:0.1.2-beta.0":
-  version: 0.1.2-beta.0
-  resolution: "@juiceswapxyz/v2-sdk@npm:0.1.2-beta.0"
-  dependencies:
-    "@ethersproject/address": ^5.0.2
-    "@ethersproject/solidity": ^5.0.9
-    "@juiceswapxyz/sdk-core": 0.1.5-beta.0
-    tiny-invariant: ^1.1.0
-    tiny-warning: ^1.0.3
-  checksum: 18065a699d703c2bb357f853764b864c4ee8dd95ebbbaa5fb5f3ec14fa40010c6bb19b64265507bf15d544402e814724a81f2f6eb258fcd81fcca0e88b542a02
-  languageName: node
-  linkType: hard
 
 "@juiceswapxyz/v2-sdk@npm:0.1.3-beta.0":
   version: 0.1.3-beta.0
@@ -2682,22 +2652,6 @@ __metadata:
     typescript: ^4.3.3
   languageName: unknown
   linkType: soft
-
-"@juiceswapxyz/v3-sdk@npm:0.1.3-beta.0":
-  version: 0.1.3-beta.0
-  resolution: "@juiceswapxyz/v3-sdk@npm:0.1.3-beta.0"
-  dependencies:
-    "@ethersproject/abi": ^5.5.0
-    "@ethersproject/solidity": ^5.0.9
-    "@juiceswapxyz/sdk-core": 0.1.5-beta.0
-    "@uniswap/swap-router-contracts": ^1.3.0
-    "@uniswap/v3-periphery": ^1.1.1
-    "@uniswap/v3-staker": 1.0.0
-    tiny-invariant: ^1.1.0
-    tiny-warning: ^1.0.3
-  checksum: 05279e1d2613abbf958b9380386b2d1057046544decb20ab7d67040134db1b14808ed38aadadffe4aec31ee69bd7dcbb34b259ad82c06c0a8bdd42e954b13670
-  languageName: node
-  linkType: hard
 
 "@juiceswapxyz/v3-sdk@npm:0.1.4-beta.0":
   version: 0.1.4-beta.0
@@ -2741,19 +2695,6 @@ __metadata:
     typescript: ^4.3.3
   languageName: unknown
   linkType: soft
-
-"@juiceswapxyz/v4-sdk@npm:0.1.3-beta.0":
-  version: 0.1.3-beta.0
-  resolution: "@juiceswapxyz/v4-sdk@npm:0.1.3-beta.0"
-  dependencies:
-    "@ethersproject/solidity": ^5.0.9
-    "@juiceswapxyz/sdk-core": 0.1.5-beta.0
-    "@juiceswapxyz/v3-sdk": 0.1.3-beta.0
-    tiny-invariant: ^1.1.0
-    tiny-warning: ^1.0.3
-  checksum: fbe5e6dc91d9c8025e287232afbbb1b8c244d9324b385baed106bb24ce16871744e821de8c0bdd9393a024a8d4395a53f616ea7dfbdd5c111051a6be95b23c2a
-  languageName: node
-  linkType: hard
 
 "@juiceswapxyz/v4-sdk@npm:0.1.4-beta.0":
   version: 0.1.4-beta.0
