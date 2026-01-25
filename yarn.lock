@@ -2509,6 +2509,23 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@juiceswapxyz/sdk-core@npm:0.1.11-beta.0":
+  version: 0.1.11-beta.0
+  resolution: "@juiceswapxyz/sdk-core@npm:0.1.11-beta.0"
+  dependencies:
+    "@ethersproject/address": ^5.0.2
+    "@ethersproject/bytes": ^5.7.0
+    "@ethersproject/keccak256": 5.7.0
+    "@ethersproject/strings": 5.7.0
+    big.js: ^5.2.2
+    decimal.js-light: ^2.5.0
+    jsbi: ^3.1.4
+    tiny-invariant: ^1.1.0
+    toformat: ^2.0.0
+  checksum: a82d957014ddafc8e307883efb2cd89f743247d14d8425ed491ad14ddfc3416bb94554c9a66e47d6d19ae2bdc42786059a0aaf590ebadd9a027cc362b264e4e1
+  languageName: node
+  linkType: hard
+
 "@juiceswapxyz/sdk-core@npm:0.1.5-beta.0":
   version: 0.1.5-beta.0
   resolution: "@juiceswapxyz/sdk-core@npm:0.1.5-beta.0"
@@ -2634,7 +2651,7 @@ __metadata:
   dependencies:
     "@ethersproject/address": ^5.0.2
     "@ethersproject/solidity": ^5.0.9
-    "@juiceswapxyz/sdk-core": 0.1.5-beta.0
+    "@juiceswapxyz/sdk-core": 0.1.11-beta.0
     "@types/big.js": ^4.0.5
     "@types/jest": ^24.0.25
     "@uniswap/v2-core": ^1.0.1
