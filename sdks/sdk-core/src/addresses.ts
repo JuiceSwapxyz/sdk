@@ -70,6 +70,7 @@ export const V2_FACTORY_ADDRESSES: AddressMap = {
   [ChainId.MONAD_TESTNET]: '0x733e88f248b742db6c14c0b1713af5ad7fdd59d0',
   [ChainId.SONEIUM]: '0x97febbc2adbd5644ba22736e962564b23f5828ce',
   [ChainId.CITREA_TESTNET]: '0x81b159FE82d8ECC8ff4801BB687166972dF3f144',
+  [ChainId.CITREA_MAINNET]: '0x0000000000000000000000000000000000000000', // TODO: Update after deployment
 }
 /**
  * @deprecated use V2_ROUTER_ADDRESSES instead
@@ -93,6 +94,7 @@ export const V2_ROUTER_ADDRESSES: AddressMap = {
   [ChainId.MONAD_TESTNET]: '0xfb8e1c3b833f9e67a71c859a132cf783b645e436',
   [ChainId.SONEIUM]: '0x273f68c234fa55b550b40e563c4a488e0d334320',
   [ChainId.CITREA_TESTNET]: '0x48bA9db1EAcDB7C97B7B601c1E213F29E996d974',
+  [ChainId.CITREA_MAINNET]: '0x0000000000000000000000000000000000000000', // TODO: Update after deployment
 }
 
 // Networks that share most of the same addresses i.e. Mainnet, Goerli, Optimism, Arbitrum, Polygon
@@ -446,6 +448,26 @@ const CITREA_TESTNET_ADDRESSES: ChainAddresses = {
   juiceSwapFeeCollectorAddress: '0xc3d817C394d55aB57f5bF0Fc5C6878ccE033E32a',
 }
 
+// Citrea Mainnet addresses - V2 + V3 + JuiceSwap
+// TODO: Populate after deployment
+// Source of truth: deploy-v3/deployments/citrea/dex.json
+// JuiceSwap contracts: smart-contracts/deployments/mainnet/
+const CITREA_MAINNET_ADDRESSES: ChainAddresses = {
+  v3CoreFactoryAddress: '0x0000000000000000000000000000000000000000',
+  multicallAddress: '0x0000000000000000000000000000000000000000',
+  quoterAddress: '0x0000000000000000000000000000000000000000',
+  nonfungiblePositionManagerAddress: '0x0000000000000000000000000000000000000000',
+  swapRouter02Address: '0x0000000000000000000000000000000000000000',
+  tickLensAddress: '0x0000000000000000000000000000000000000000',
+  v3MigratorAddress: '0x0000000000000000000000000000000000000000',
+  proxyAdminAddress: '0x0000000000000000000000000000000000000000',
+
+  // JuiceSwap contracts - TODO: Populate after deployment
+  juiceSwapGatewayAddress: '0x0000000000000000000000000000000000000000',
+  juiceSwapGovernorAddress: '0x0000000000000000000000000000000000000000',
+  juiceSwapFeeCollectorAddress: '0x0000000000000000000000000000000000000000',
+}
+
 export const CHAIN_TO_ADDRESSES_MAP: Record<SupportedChainsType, ChainAddresses> = {
   [ChainId.MAINNET]: MAINNET_ADDRESSES,
   [ChainId.OPTIMISM]: OPTIMISM_ADDRESSES,
@@ -476,6 +498,7 @@ export const CHAIN_TO_ADDRESSES_MAP: Record<SupportedChainsType, ChainAddresses>
   [ChainId.MONAD_TESTNET]: MONAD_TESTNET_ADDRESSES,
   [ChainId.SONEIUM]: SONEIUM_ADDRESSES,
   [ChainId.CITREA_TESTNET]: CITREA_TESTNET_ADDRESSES,
+  [ChainId.CITREA_MAINNET]: CITREA_MAINNET_ADDRESSES,
 }
 
 /* V3 Contract Addresses */
