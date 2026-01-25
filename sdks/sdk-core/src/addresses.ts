@@ -450,10 +450,10 @@ const CITREA_TESTNET_ADDRESSES: ChainAddresses = {
   v3MigratorAddress: '0xfa83918a27F9cC32619ae1A85f7e1Ae3e3F6Ceb8',
   proxyAdminAddress: '0xCdc7C81784F9D3b4061e754477BEA077B7B4cCa4',
 
-  // JuiceSwap contracts - TODO: Redeploy after DEX redeployment (2026-01-25)
-  juiceSwapGatewayAddress: '0x0000000000000000000000000000000000000000',
-  juiceSwapGovernorAddress: '0x0000000000000000000000000000000000000000',
-  juiceSwapFeeCollectorAddress: '0x0000000000000000000000000000000000000000',
+  // JuiceSwap contracts (deployed 2026-01-25)
+  juiceSwapGatewayAddress: '0x8eE3Dd585752805A258ad3a963949a7c3fec44eB',
+  juiceSwapGovernorAddress: '0x8AFD7CB73Ce85b44996B86ec604c125af244A2B8',
+  juiceSwapFeeCollectorAddress: '0xfac6303F78A2b316a20eD927Ba0f7a7d07AaC47E',
 }
 
 // Citrea Mainnet addresses - V2 + V3 + JuiceSwap
