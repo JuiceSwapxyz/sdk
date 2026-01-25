@@ -97,6 +97,14 @@ export const V2_ROUTER_ADDRESSES: AddressMap = {
   [ChainId.CITREA_MAINNET]: '0x0000000000000000000000000000000000000000', // TODO: Update after deployment
 }
 
+/**
+ * V2 Pair init code hash for CREATE2 pair address computation.
+ * Computed from: keccak256(UniswapV2Pair.creationCode)
+ * Source: @juiceswapxyz/v2-core (branded LP tokens: "JuiceSwap V2" / "JUICE-V2")
+ * Must match: v2-periphery/contracts/libraries/UniswapV2Library.sol line 29
+ */
+export const V2_INIT_CODE_HASH = '0xdc3b9f52403077ec7261ad325e15f34e395cf7e2a5c3782098edb10a7599cc3e'
+
 // Networks that share most of the same addresses i.e. Mainnet, Goerli, Optimism, Arbitrum, Polygon
 const DEFAULT_ADDRESSES: ChainAddresses = {
   v3CoreFactoryAddress: '0x1F98431c8aD98523631AE4a59f267346ea31F984',
