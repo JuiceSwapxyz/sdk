@@ -26,6 +26,16 @@ type ChainAddresses = {
   juiceSwapGatewayAddress?: string
   juiceSwapGovernorAddress?: string
   juiceSwapFeeCollectorAddress?: string
+
+  // L0 Bridge Contracts - Token addresses (on destination chain)
+  l0UsdcAddress?: string
+  l0UsdtAddress?: string
+  l0WbtcAddress?: string
+
+  // L0 Bridge Contracts - OFT/Adapter addresses
+  l0UsdcOftAddress?: string // DestinationOUSDC on Citrea, SourceOFTAdapter on Ethereum
+  l0UsdtOftAddress?: string // DestinationOUSDT on Citrea, SourceOFTAdapter on Ethereum
+  l0WbtcOftAddress?: string // WBTCOFT on Citrea, WBTCOFTAdapter on Ethereum
 }
 
 const DEFAULT_NETWORKS = [ChainId.MAINNET, ChainId.GOERLI, ChainId.SEPOLIA]
@@ -113,6 +123,11 @@ const MAINNET_ADDRESSES: ChainAddresses = {
   v4PositionManagerAddress: '0xbd216513d74c8cf14cf4747e6aaa6420ff64ee9e',
   v4StateView: '0x7ffe42c4a5deea5b0fec41c94c136cf115597227',
   v4QuoterAddress: '0x52f0e24d1c21c8a0cb1e5a5dd6198556bd9e1203',
+
+  // L0 Source Bridges to Citrea
+  l0UsdcOftAddress: '0xdaa289CC487Cf95Ba99Db62f791c7E2d2a4b868E',
+  l0UsdtOftAddress: '0x6925ccD29e3993c82a574CED4372d8737C6dbba6',
+  l0WbtcOftAddress: '0x2c01390E10e44C968B73A7BcFF7E4b4F50ba76Ed',
 }
 const GOERLI_ADDRESSES: ChainAddresses = {
   ...DEFAULT_ADDRESSES,
@@ -466,6 +481,13 @@ const CITREA_MAINNET_ADDRESSES: ChainAddresses = {
   juiceSwapGatewayAddress: '0x0000000000000000000000000000000000000000',
   juiceSwapGovernorAddress: '0x0000000000000000000000000000000000000000',
   juiceSwapFeeCollectorAddress: '0x0000000000000000000000000000000000000000',
+
+  // L0 Bridge Contracts (deployed)
+  l0UsdcAddress: '0xE045e6c36cF77FAA2CfB54466D71A3aEF7bbE839',
+  l0UsdcOftAddress: '0x41710804caB0974638E1504DB723D7bddec22e30',
+  l0UsdtAddress: '0x9f3096Bac87e7F03DC09b0B416eB0DF837304dc4',
+  l0UsdtOftAddress: '0xF8b5983BFa11dc763184c96065D508AE1502C030',
+  l0WbtcOftAddress: '0xDF240DC08B0FdaD1d93b74d5048871232f6BEA3d', // WBTC.e is combined token+bridge (OFT)
 }
 
 export const CHAIN_TO_ADDRESSES_MAP: Record<SupportedChainsType, ChainAddresses> = {
@@ -627,6 +649,55 @@ export const JUICESWAP_FEE_COLLECTOR_ADDRESSES: AddressMap = SUPPORTED_CHAINS.re
   const juiceSwapFeeCollectorAddress = CHAIN_TO_ADDRESSES_MAP[chainId].juiceSwapFeeCollectorAddress
   if (juiceSwapFeeCollectorAddress) {
     memo[chainId] = juiceSwapFeeCollectorAddress
+  }
+  return memo
+}, {})
+
+/* L0 Bridge Contract Addresses */
+export const L0_USDC_ADDRESSES: AddressMap = SUPPORTED_CHAINS.reduce<AddressMap>((memo, chainId) => {
+  const l0UsdcAddress = CHAIN_TO_ADDRESSES_MAP[chainId].l0UsdcAddress
+  if (l0UsdcAddress) {
+    memo[chainId] = l0UsdcAddress
+  }
+  return memo
+}, {})
+
+export const L0_USDT_ADDRESSES: AddressMap = SUPPORTED_CHAINS.reduce<AddressMap>((memo, chainId) => {
+  const l0UsdtAddress = CHAIN_TO_ADDRESSES_MAP[chainId].l0UsdtAddress
+  if (l0UsdtAddress) {
+    memo[chainId] = l0UsdtAddress
+  }
+  return memo
+}, {})
+
+export const L0_WBTC_ADDRESSES: AddressMap = SUPPORTED_CHAINS.reduce<AddressMap>((memo, chainId) => {
+  const l0WbtcAddress = CHAIN_TO_ADDRESSES_MAP[chainId].l0WbtcAddress
+  if (l0WbtcAddress) {
+    memo[chainId] = l0WbtcAddress
+  }
+  return memo
+}, {})
+
+export const L0_USDC_OFT_ADDRESSES: AddressMap = SUPPORTED_CHAINS.reduce<AddressMap>((memo, chainId) => {
+  const l0UsdcOftAddress = CHAIN_TO_ADDRESSES_MAP[chainId].l0UsdcOftAddress
+  if (l0UsdcOftAddress) {
+    memo[chainId] = l0UsdcOftAddress
+  }
+  return memo
+}, {})
+
+export const L0_USDT_OFT_ADDRESSES: AddressMap = SUPPORTED_CHAINS.reduce<AddressMap>((memo, chainId) => {
+  const l0UsdtOftAddress = CHAIN_TO_ADDRESSES_MAP[chainId].l0UsdtOftAddress
+  if (l0UsdtOftAddress) {
+    memo[chainId] = l0UsdtOftAddress
+  }
+  return memo
+}, {})
+
+export const L0_WBTC_OFT_ADDRESSES: AddressMap = SUPPORTED_CHAINS.reduce<AddressMap>((memo, chainId) => {
+  const l0WbtcOftAddress = CHAIN_TO_ADDRESSES_MAP[chainId].l0WbtcOftAddress
+  if (l0WbtcOftAddress) {
+    memo[chainId] = l0WbtcOftAddress
   }
   return memo
 }, {})
