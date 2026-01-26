@@ -484,10 +484,10 @@ const CITREA_MAINNET_ADDRESSES: ChainAddresses = {
   v3MigratorAddress: '0xB9e69B428a5BfF4aCA9bfE66E80BAfD0477165E6',
   proxyAdminAddress: '0x7864b1f116F939eeCFDCf76B532d5BBDa5F80031',
 
-  // JuiceSwap contracts - TODO: Populate after Steps 4-5
-  juiceSwapGatewayAddress: '0x0000000000000000000000000000000000000000',
-  juiceSwapGovernorAddress: '0x0000000000000000000000000000000000000000',
-  juiceSwapFeeCollectorAddress: '0x0000000000000000000000000000000000000000',
+  // JuiceSwap contracts (deployed 2026-01-26)
+  juiceSwapGatewayAddress: '0xAFcfD58Fe17BEb0c9D15C51D19519682dFcdaab9',
+  juiceSwapGovernorAddress: '0x51f3D5905C768CCA2D4904Ca7877614CeaD607ae',
+  juiceSwapFeeCollectorAddress: '0xD2D68A452A6f5d9090153f52E64f23cc7fF8A97b',
 
   // L0 Bridge Contracts (deployed)
   l0UsdcAddress: '0xE045e6c36cF77FAA2CfB54466D71A3aEF7bbE839',
