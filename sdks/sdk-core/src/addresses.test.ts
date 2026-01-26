@@ -42,5 +42,10 @@ describe('addresses', () => {
       const address = SWAP_ROUTER_02_ADDRESSES(ChainId.BLAST)
       expect(address).toEqual('0x549FEB8c9bd4c12Ad2AB27022dA12492aC452B66')
     })
+
+    it('should return the correct address for citrea mainnet', () => {
+      const address = SWAP_ROUTER_02_ADDRESSES(ChainId.CITREA_MAINNET)
+      expect(address).toEqual('0x565eD3D57fe40f78A46f348C220121AE093c3cF8')
+    })
   })
 })
