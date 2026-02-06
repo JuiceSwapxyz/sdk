@@ -1,4 +1,13 @@
-import { Currency, Fraction, Percent, Price, sortedInsert, CurrencyAmount, TradeType, Token } from '@juiceswapxyz/sdk-core'
+import {
+  Currency,
+  Fraction,
+  Percent,
+  Price,
+  sortedInsert,
+  CurrencyAmount,
+  TradeType,
+  Token,
+} from '@juiceswapxyz/sdk-core'
 import { Pair } from '@juiceswapxyz/v2-sdk'
 import { BestTradeOptions, Pool as V3Pool } from '@juiceswapxyz/v3-sdk'
 import { Pool as V4Pool } from '@juiceswapxyz/v4-sdk'
