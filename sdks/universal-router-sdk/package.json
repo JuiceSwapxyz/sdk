@@ -25,7 +25,7 @@
     "prettier": "prettier --check '**/*.ts' && prettier --check '**/*.json'",
     "prettier:fix": "prettier --write '**/*.ts' && prettier --write '**/*.json'",
     "release": "semantic-release",
-    "test": "yarn test:hardhat && yarn test:forge",
+    "test": "if [ -z \"$FORK_URL\" ]; then echo 'FORK_URL not set, skipping universal-router-sdk tests'; exit 0; fi && yarn test:hardhat && yarn test:forge",
     "test:forge": "forge test",
     "test:hardhat": "env TS_NODE_COMPILER_OPTIONS='{\"module\": \"commonjs\" }' hardhat test"
   },

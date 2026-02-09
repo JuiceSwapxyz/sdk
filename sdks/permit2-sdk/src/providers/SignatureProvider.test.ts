@@ -3,7 +3,7 @@ import { PermitTransferFrom, PermitBatchTransferFrom } from '../signatureTransfe
 import { BigNumber } from '@ethersproject/bignumber'
 import { ethers } from 'ethers'
 
-describe('SignatureProvider', () => {
+(process.env.FORK_URL ? describe : describe.skip)('SignatureProvider', () => {
   let provider: ethers.providers.JsonRpcProvider
   let permit2Address: string
   let owner: string
