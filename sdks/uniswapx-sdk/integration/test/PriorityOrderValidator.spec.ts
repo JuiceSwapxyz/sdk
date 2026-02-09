@@ -25,13 +25,9 @@ import { REACTOR_ADDRESS_MAPPING, UNISWAPX_ORDER_QUOTER_MAPPING } from "../../sr
 import { parseEther } from "ethers/lib/utils";
 import { PERMIT2_ADDRESS } from "@uniswap/permit2-sdk";
 
-if(!process.env.FORK_URL_8453) {
-  throw new Error("FORK_URL_8453 not defined in environment");
-}
-
 // Priority order integration tests do not run on hardhat because they require
 // a full JsonRpcProvider which supports block overrides
-describe("PriorityOrderValidator", () => {
+(process.env.FORK_URL_8453 ? describe : describe.skip)("PriorityOrderValidator", () => {
   let reactor: PriorityOrderReactor;
   let permit2: Permit2;
   let quoter: OrderQuoter;

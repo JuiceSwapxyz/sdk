@@ -2462,17 +2462,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@juiceswapxyz/router-sdk@npm:3.0.3":
-  version: 3.0.3
-  resolution: "@juiceswapxyz/router-sdk@npm:3.0.3"
+"@juiceswapxyz/router-sdk@npm:^3.0.4":
+  version: 3.0.4
+  resolution: "@juiceswapxyz/router-sdk@npm:3.0.4"
   dependencies:
     "@ethersproject/abi": ^5.5.0
     "@juiceswapxyz/sdk-core": 3.0.4
-    "@juiceswapxyz/v2-sdk": 3.0.3
+    "@juiceswapxyz/v2-sdk": ^3.0.4
     "@juiceswapxyz/v3-sdk": 3.0.5
     "@juiceswapxyz/v4-sdk": 3.0.3
     "@uniswap/swap-router-contracts": ^1.3.0
-  checksum: 5e659b28b1b13a6b8a6aee888ff27ac45e0b709056394f998dbfca685f5c26019beb4c62ca5e27bbea255c5a3ec8e7c29001fcb15b84c70032c83a05339de13d
+  checksum: 5544be70f948750332bc0c8f2c450a8d6511e9581c8c0b194cd98b2f435219db36c48c885feb5dde6fb20bb3177cf7b804e05f6ce686d7557660fffa6ca87559
   languageName: node
   linkType: hard
 
@@ -2482,7 +2482,7 @@ __metadata:
   dependencies:
     "@ethersproject/abi": ^5.5.0
     "@juiceswapxyz/sdk-core": 3.0.4
-    "@juiceswapxyz/v2-sdk": 3.0.3
+    "@juiceswapxyz/v2-sdk": ^3.0.4
     "@juiceswapxyz/v3-sdk": 3.0.5
     "@juiceswapxyz/v4-sdk": 3.0.3
     "@types/jest": ^24.0.25
@@ -2569,9 +2569,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@juiceswapxyz/universal-router-sdk@workspace:sdks/universal-router-sdk"
   dependencies:
-    "@juiceswapxyz/router-sdk": 3.0.3
+    "@juiceswapxyz/router-sdk": ^3.0.4
     "@juiceswapxyz/sdk-core": 3.0.4
-    "@juiceswapxyz/v2-sdk": 3.0.3
+    "@juiceswapxyz/v2-sdk": ^3.0.4
     "@juiceswapxyz/v3-sdk": 3.0.5
     "@juiceswapxyz/v4-sdk": 3.0.3
     "@openzeppelin/contracts": 4.7.0
@@ -2598,16 +2598,16 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@juiceswapxyz/v2-sdk@npm:3.0.3":
-  version: 3.0.3
-  resolution: "@juiceswapxyz/v2-sdk@npm:3.0.3"
+"@juiceswapxyz/v2-sdk@npm:^3.0.4":
+  version: 3.0.4
+  resolution: "@juiceswapxyz/v2-sdk@npm:3.0.4"
   dependencies:
     "@ethersproject/address": ^5.0.2
     "@ethersproject/solidity": ^5.0.9
     "@juiceswapxyz/sdk-core": 3.0.4
     tiny-invariant: ^1.1.0
     tiny-warning: ^1.0.3
-  checksum: 1d16ad1c6c4d6534dba83cf7d4ddf226c3e96a644628e482556f91d166bc4489e7cd4b2ad2d8a98bd0df183db0aa2884abb79b2402a7c6c96adebfa61ac90995
+  checksum: d39e3f0e3adca151c17f666c2c58eeed7d6cf3f517f7009c4ae27e602bf8810e1516df61e93d386431f539fe711ef3270811b8323bfbecc7a2aa6bbf151f19df
   languageName: node
   linkType: hard
 

@@ -11,7 +11,7 @@
     "node": ">=10"
   },
   "scripts": {
-    "test": "hardhat test"
+    "test": "if [ -z \"$FORK_URL\" ]; then echo 'FORK_URL not set, skipping integration tests'; exit 0; fi && hardhat test"
   },
   "author": "Uniswap",
   "devDependencies": {

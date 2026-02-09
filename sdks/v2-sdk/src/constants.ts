@@ -13,15 +13,18 @@ export const INIT_CODE_HASH = '0x96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbe
 // Per-chain init code hashes for custom V2 deployments
 export const INIT_CODE_HASH_MAP: { [chainId: number]: string } = {
   [ChainId.CITREA_TESTNET]: '0xdc3b9f52403077ec7261ad325e15f34e395cf7e2a5c3782098edb10a7599cc3e',
+  [ChainId.CITREA_MAINNET]: '0xdc3b9f52403077ec7261ad325e15f34e395cf7e2a5c3782098edb10a7599cc3e',
 }
 
 // Per-chain LP token branding for custom V2 deployments
 export const LP_TOKEN_SYMBOL_MAP: { [chainId: number]: string } = {
   [ChainId.CITREA_TESTNET]: 'JUICE-V2',
+  [ChainId.CITREA_MAINNET]: 'JUICE-V2',
 }
 
 export const LP_TOKEN_NAME_MAP: { [chainId: number]: string } = {
   [ChainId.CITREA_TESTNET]: 'JuiceSwap V2',
+  [ChainId.CITREA_MAINNET]: 'JuiceSwap V2',
 }
 
 export const MINIMUM_LIQUIDITY = JSBI.BigInt(1000)
